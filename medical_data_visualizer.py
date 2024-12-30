@@ -33,10 +33,9 @@ def draw_cat_plot():
     
     # 7
     print(df_cat)
-    # df_cat["total"] = 1
-    df_cat.groupby(["cardio", "variable", "value"], as_index =False).count()
+    
     # 8
-    fig = sns.catplot(x='variable',  hue='value', col='cardio', kind='count', data=df_cat)
+    fig = sns.catplot(x='variable',  hue='value', kind='count', data=df_cat)
     fig.set_axis_labels('variable', 'total')
     
     # 9
